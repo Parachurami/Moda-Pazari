@@ -1,0 +1,85 @@
+.advert-container{
+    height: 40%;
+    width: 100%;
+    background-color: #FBF0E4;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advertWrapper{
+    /* border: 1px solid black; */
+    /* width: 100%;
+    height: 100%; */
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+}
+
+.advert-left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    animation: fadeInAnimation 0.5s ease 0s 1 alternate;
+}
+
+.advert-right{
+    width: 50%;
+    height: 100%;
+}
+
+.advertTitle{
+    color: #090C9B;
+    font-weight: 'semi-bold';
+    font-size: 2.5rem;
+    width: 80%;
+    text-align: start;
+    margin-top: 30px;
+}
+
+.advert-left button{
+    background-color: #090C9B;
+    color: white;
+    width: 20%;
+    height: 20%;
+    border-radius: 28px;
+    border: none;
+    padding: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.advert-image{
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid yellow; */
+    overflow: hidden;
+}
+
+.advert-image img{
+    /* object-fit: cover; */
+    /* width: 100%; */
+    width: 80%;
+    margin-top: -30px;
+    animation: fadeInAnimation 0.5s ease 0s 1 alternate;
+}
+
+@keyframes fadeInAnimation {
+    0%{
+        transform: translateX(60px) translateY(60px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px) translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width:20px) {
+    
+}
