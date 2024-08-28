@@ -1,10 +1,18 @@
 import React from 'react'
 import './DetailCard.css'
 
-function DetailCard() {
+function DetailCard({image}) {
   return (
-    <div onClick={()=>{}} className='detailCardContainer'>
-      
+    <div style={{
+        display:'flex',
+        alignItems:'center',
+        justifyContent:'center'
+    }} onClick={()=>{}} className='detailCardContainer'>
+      <img style={
+          {
+              height:'80%'
+          }
+      } src={image} alt={'image'}/>
     </div>
   )
 }

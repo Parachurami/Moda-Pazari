@@ -49,10 +49,10 @@ function ProductDetail() {
                         <img  src={product.image} alt="" />
                     </div>
                     <div className="optionsContainer">
-                        <DetailCard/>
-                        <DetailCard/>
-                        <DetailCard/>
-                        <DetailCard/>
+                        <DetailCard image={product.image}/>
+                        <DetailCard image={product.image}/>
+                        <DetailCard image={product.image}/>
+                        <DetailCard image={product.image}/>
                     </div>
                 </div>
                 <div className="rightSide">
