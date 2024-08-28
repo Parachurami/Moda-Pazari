@@ -47,14 +47,15 @@ form h2{
     flex-direction: row;
     /*gap: 10px;*/
     color: white;
-    align-items: center;
-    justify-content: space-between;
+    /*!*align-items: center;*!gap: 100px;*/
+    /*justify-content: space-between;*/
     width: 96%;
     border:1px solid rgba(243, 243, 246, 0.32);
     border-radius: 5px;
     height: 100%;
     padding-left: 7px;
     padding-right: 7px;
+    /*margin-bottom: 10px;*/
 }
 
 .input-field input{
@@ -103,9 +104,9 @@ form h2{
 }
 
 
-.signupBtn{
+ .signupBtn{
     border:1px solid #7B6BAB;
-    color: #fff;
+    /*color: #fff;*/
     background-color: #5E4D99;
     width: 100%;
     margin-top: 10px;
