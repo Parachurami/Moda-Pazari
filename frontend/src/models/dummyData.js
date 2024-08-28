@@ -1,5 +1,5 @@
 
-import image1 from "C:/Users/steph/Documents/coding/React-html projects/Moda-Pazari/frontend/src/assets/images/male/Abomasnow Men's Crew Neck Classical Short Sleeve Tee.jpg";
+// import image1 from "C:/Users/steph/Documents/coding/React-html projects/Moda-Pazari/frontend/src/assets/images/male/Abomasnow Men's Crew Neck Classical Short Sleeve Tee.jpg";
 import image2 from "C:/Users/steph/Documents/coding/React-html projects/Moda-Pazari/frontend/src/assets/images/male/Adult Polyester Spandex Short Sleeve Compression.jpg";
 import image3 from "C:/Users/steph/Documents/coding/React-html projects/Moda-Pazari/frontend/src/assets/images/male/Allrj Oversized Solid Color Pullover Hoodie Sweatshirt - Blue _ XL.jpg";
 import image4 from "C:/Users/steph/Documents/coding/React-html projects/Moda-Pazari/frontend/src/assets/images/male/Cropped T-Shirt.jpg";
@@ -28,7 +28,7 @@ import image26 from "C:/Users/steph/Documents/coding/React-html projects/Moda-Pa
 import Product from "./Product";
 
 const currentImages = [
-    image1,
+    // image1,
     image2,
     image3,
     image4,
