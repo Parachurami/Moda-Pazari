@@ -1,0 +1,199 @@
+@import url('../../misc/fonts.css');
+
+.productDetailContainer .header hr{
+    width: 95%;
+    align-self: center;
+    color: rgba(177, 177, 177, 0.633);
+}
+
+.productDetailContainer .content{
+    /* border: 3px solid red; */
+    /* margin-top: 150px; */
+    height: 100%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+
+.productDetailContainer{
+    height: 100%;
+    /* width: ; */
+}
+
+.firstDetailSection{
+    transition: 0.5s ease;
+    width: 95%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.firstDetailSection .leftSide, 
+.firstDetailSection .rightSide{
+    width: 45%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.firstDetailSection .leftSide{
+    border: none;
+}
+
+.firstDetailSection .rightSide .title{
+    font-size: 2.3rem;
+    font-weight: bold;
+    font-family: 'poppins';
+    font-weight: normal;
+    /* text-align: left; */
+}
+
+.firstDetailSection .rightSide .description{
+    font-weight: 300;
+}
+
+.firstDetailSection .rightSide{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+
+.firstDetailSection .rightSide .productPrice{
+    border-top: 1px solid rgba(105, 104, 104, 0.204);
+    padding: 20px 0px;
+    border-bottom: 1px solid rgba(105, 104, 104, 0.204);
+    font-size: 2.5rem;
+    margin-top: 30px;
+    width: 40%;
+    /* text-align: left; */
+}
+
+.productImage{
+    width: 100%;
+    height: 70%;
+    background-color: rgba(105, 104, 104, 0.204);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+
+.productImage img{
+    height: 80%;
+}
+
+.optionsContainer{
+    margin-top: 25px;
+    /* border: 1px solid yellow; */
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.colorOptionContainer{
+    margin-top: 40px;
+    border-bottom: 1px solid rgba(105, 104, 104, 0.204);
+    padding-bottom: 20px;
+    width: 40%;
+}
+
+.colorOptionTitle{
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.colorOptions{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.counterContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    gap: 40px;
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+
+.counterContainer .counter{
+    display: flex;
+    flex-direction: row;
+    /* gap: 20px; */
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F5F6F6;
+    width: 110px;
+    height: 45px;
+    border-radius: 25px;
+    padding: 0px 5px;
+}
+
+.counterContainer .counter *{
+    margin-top: 2px;
+}
+
+.counterContainer .counter button{
+    background-color: transparent;
+    border: none;
+    /* font-size: 16px; */
+}
+
+
+.itemsLeft{
+    text-align: left;
+    font-size: 14px;
+}
+
+.itemsLeft span{
+    color: #ff8c39;
+}
+
+.bottomBtns{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 40px;
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+.buyNowBtn, .addToCartBtn{
+    width: 200px;
+    height: 55px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.buyNowBtn{
+    background-color: #090C9B;
+    color: white;
+    border: none;
+}
+
+.addToCartBtn{
+    background-color: transparent;
+    color: #090C9B;
+    border: 1px solid #090C9B;
+    font-weight: 600;
+}
+
+
+@keyframes fadeUpAnimation {
+    0%{
+        transform: translateY(60px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px) translateY(0px);
+        opacity: 1;
+    }
+}

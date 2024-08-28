@@ -1,14 +1,14 @@
 @font-face{
     font-family: 'poppins';
     src: url('../assets/fonts/Poppins/Poppins-Regular.ttf');
-    font-weight: normal;
+    font-weight: 'normal';
     font-style: normal;
 }
 
-@font-face{
+/* @font-face{
     font-family: 'poppins';
     src: url('../assets/fonts/Poppins/Poppins-Bold.ttf');
-    font-weight: bold;
+    font-weight: 'bold';
     font-style: normal;
 }
 
@@ -17,4 +17,4 @@
     src: url('../assets/fonts/Poppins/Poppins-SemiBold.ttf');
     font-weight: 'semi-bold';
     font-style: normal;
-}
+} */

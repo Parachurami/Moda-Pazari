@@ -1,0 +1,7 @@
+.detailCardContainer{
+    height: 100%;
+    width: 22%;
+    background-color: rgba(114, 114, 114, 0.114);
+    border-radius: 20px;
+    cursor: pointer;
+}

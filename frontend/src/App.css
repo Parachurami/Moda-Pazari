@@ -1,3 +1,11 @@
+::-webkit-scrollbar-thumb{
+  width: 1px;
+}
+
+::-webkit-scrollbar-track{
+  width: 3px;
+}
+
 *{
   font-weight: normal;
 }
@@ -9,6 +17,7 @@
   width: 100vw;
   background-color:#A0DBED;
   margin: 0; */
+  height: 100vh;
 }
 
 body{

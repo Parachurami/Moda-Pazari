@@ -24,7 +24,7 @@ function ProductCard({product}) {
         <div onClick={()=>{
         navigation('/productDetail', {state:product})
       }} className="productCard-image">
-
+          <img src={product.image} alt="" />
         </div>
       </div>
       <div className="productCard-bottom">
@@ -38,7 +38,9 @@ function ProductCard({product}) {
             Add to Cart
           </button>
         </div>
-        <div className="pcbr"></div>
+        <div className="pcbr">
+          <p>{product.price}</p>
+        </div>
       </div>
     </div>
   )
@@ -47,7 +49,7 @@ function ProductCard({product}) {
 export default ProductCard
 
 
-const StarRating = ({ totalStars = 5 , currentRatings = 0}) => {
+export const StarRating = ({ totalStars = 5 , currentRatings = 0}) => {
   const [rating, setRating] = useState(currentRatings);
   const [hover, setHover] = useState(0);
 
@@ -70,7 +72,7 @@ const StarRating = ({ totalStars = 5 , currentRatings = 0}) => {
   );
 };
 
-const Star = ({ filled, onClick, onMouseEnter, onMouseLeave }) => {
+export const Star = ({ filled, onClick, onMouseEnter, onMouseLeave }) => {
   return (
       <span
           onClick={onClick}

@@ -1,0 +1,12 @@
+.coloroptionContainer{
+    border-radius: 50%;
+}
+
+.colorOptionBorder{
+    
+    /* transition: 0.5s ease; */
+}
+
+.coloroptionContainer:hover + .colorOptionBorder{
+    border: 2px solid black;
+}
