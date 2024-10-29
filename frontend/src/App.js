@@ -3,24 +3,18 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import HomePage from './pages/home-page/HomePage';
 import Login from './pages/login-page/Login'
 import ProductDetail from './pages/product-details/ProductDetail';
-import Checkout from './pages/checkout-page/Checkout.jsx';
-import CartProvider from './context/CartProvider.js';
-import {SnackbarProvider}from 'notistack'
+import Signup from "./pages/signup-page/Signup";
 function App() {
   return (
     <div className="App">
-      <SnackbarProvider maxSnack={3}>
-        <CartProvider>
-          <BrowserRouter>
-              <Routes>
-                  <Route path={'/'} element={<HomePage/>}/>
-                  <Route path={'/login'} element={<Login/>}/>
-                  <Route path='/productDetail' element={<ProductDetail/>}/>
-                  <Route path='/checkout' element={<Checkout/>}/>
-              </Routes>
-          </BrowserRouter>
-        </CartProvider>
-      </SnackbarProvider>
+      <BrowserRouter>
+          <Routes>
+              <Route path={'/'} element={<HomePage/>}/>
+              <Route path={'/login'} element={<Login/>}/>
+              <Route path={'/signup'} element={<Signup/>}/>
+              <Route path='/productDetail' element={<ProductDetail/>}/>
+          </Routes>
+      </BrowserRouter>
     </div>
   );
 }
