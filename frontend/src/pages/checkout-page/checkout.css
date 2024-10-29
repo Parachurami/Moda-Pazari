@@ -1,0 +1,289 @@
+.checkout-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 120px;
+    margin-left: calc(100vw * 0.03);
+    margin-right: calc(100vw * 0.03);
+    /* border: 1px solid red; */
+}
+
+.ct-lft{
+    width: 53%;
+    margin-bottom: 30px;
+}
+
+.ct-lft .lft-top, .ct-lft .lft-bottom{
+    border: 1px solid rgba(52, 51, 51, 0.296);
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.lft-top{
+    margin-bottom: 30px;
+}
+
+
+.lft-top > h1{
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 30px;
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+
+.product-detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.detail-image{
+    height: calc(100vh * 0.33);
+    width: calc(100vw * 0.18);
+    background-color: rgba(114, 114, 114, 0.114);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-image img{
+    height: 80%;
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+
+.detail-lft{
+    display: flex;
+    flex-direction: row;
+    gap: calc(100vw * 0.03);
+    align-items: center;
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+
+.detail-desc{
+    text-align: left;
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+
+.detail-desc p:first-child{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.detail-rgt{
+    text-align: right;
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+
+.detail-rgt p:first-child{
+    font-weight: 600;
+}
+
+.lb-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.saveInfo-btn{
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(114, 114, 114, 0.114);
+    font-size: 80%;
+    padding: 10px 10px;
+    font-weight: 600;
+    cursor: pointer;
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+
+.input-section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+
+.info-input{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 48%;
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+
+.info-input input{
+    outline: none;
+    border: 1px solid rgba(128, 128, 128, 0.542);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.info-input input::placeholder{
+    color: rgba(128, 128, 128, 0.542);
+}
+
+.input-section:nth-child(3) .info-input{
+    width: 100%;
+}
+
+.ct-rgt{
+    border: 1px solid rgba(52, 51, 51, 0.296);
+    padding: 30px;
+    border-radius: 20px;
+    width: 33%;
+    height: fit-content;
+    margin-bottom: 30px;
+    transition: 0.8s ease-in-out;
+}
+
+.ct-rgt hr{
+    margin-top: 10px;
+    color: rgba(136, 136, 136, 0.04);
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+
+.ct-rgt h1, .ct-rgt h2{
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+
+.couponContainer{
+    width: 100%;
+    background-color: rgba(114, 114, 114, 0.114);
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+
+.coupon-input{
+    width: 60%;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    height: 75%;
+    background-color: transparent;
+    padding: 10px;
+    /* animation: fadeUpAnimation 0.8s ease 0s 1 alternate; */
+}
+
+.ac-btn{
+    width: 40%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #090c9b;
+    color: white;
+    border: none;
+    /* animation: fadeUpAnimation 0.8s ease 0s 1 alternate; */
+}
+
+.payment-options{
+    margin-top: 30px;
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+
+.ct-rgt h1, .ct-rgt h2{
+    text-align: left;
+}
+
+.cardOptions{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    /* border: 1px solid black; */
+    height: 50px;
+    width: 60%;
+    margin-top: 30px;
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+
+.cardOption{
+    height: 100%;
+    width: 25%;
+    background-color: rgba(166, 166, 166, 0.114);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cardOption img{
+    height: 80%;
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+
+.cardOption:nth-child(3) img{
+    height: 60%;
+}
+
+.ct-rgt .info-input{
+    width: 100%;
+    margin-top: 30px;
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+
+.ct-rgt .input-section .info-input{
+    width: 45%;
+}
+
+.costbreakdown-comp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+
+.subTotal{
+    margin-top: 20px;
+    animation: fadeUpAnimation 0.8s ease 0s 1 alternate;
+}
+
+.subTotal p{
+    font-weight: 600;
+}
+
+.modalContainer{
+    animation: ScaleAnimation 0.8s ease 0s 1 alternate;
+    border: none;
+    outline: none;
+}
+
+.cardPay{
+    transition: 0.8s ease-in-out;
+}
+
+@keyframes ScaleAnimation {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeUpAnimation {
+    0%{
+        transform: translateY(60px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px) translateY(0px);
+        opacity: 1;
+    }
+}

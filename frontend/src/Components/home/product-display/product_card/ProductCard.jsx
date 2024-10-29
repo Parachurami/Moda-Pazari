@@ -1,15 +1,53 @@
 import { FavoriteBorderRounded, FavoriteRounded } from '@mui/icons-material'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './ProductCard.css'
 import { useNavigate } from 'react-router-dom'
+import { CartContext } from '../../../../context/CartProvider'
+import { useSnackbar } from 'notistack'
+import CartItem from '../../../../models/CartItem.ts'
 
 function ProductCard({product}) {
+  const {enqueueSnackbar} = useSnackbar()
+  const {addToCart, isInCart} = useContext(CartContext);
   const navigation = useNavigate();
   const [isFavorite, setIsFavorite] = useState(false)
   const toggleFavorite = () =>{
     setIsFavorite(!isFavorite);
     product.isFavorite = isFavorite;
   }
+
+  const notify = () =>{
+    enqueueSnackbar('Product Added To Cart', {
+      variant: 'success',
+      autoHideDuration: 2000,
+    })
+  }
+
+  const cartAddHandler = (quantity, selectedColor) =>{
+    // const newCartItem = {
+    //   id:Date.now(),
+    //   product,
+    //   detail:{
+    //       quantity,
+    //       color:selectedColor
+    //   }
+    // }
+
+    const newCartItem = new CartItem(
+      Date.now(),
+      product,
+      {
+        quantity,
+        color:selectedColor
+      }
+    )
+
+    if(!isInCart(newCartItem)){
+      addToCart(newCartItem);
+      notify();
+    }
+  }
+    
   
   return (
     <div className='productCard-container'>
@@ -24,7 +62,7 @@ function ProductCard({product}) {
         <div onClick={()=>{
         navigation('/productDetail', {state:product})
       }} className="productCard-image">
-          <img src={product.image} alt="" />
+          <img  src={product?.image} alt="" />
         </div>
       </div>
       <div className="productCard-bottom">
@@ -34,12 +72,12 @@ function ProductCard({product}) {
           <div className="ratings">
             <StarRating totalStars={5} currentRatings={product.rating}/>
           </div>
-          <button className='addToCart'>
+          <button onClick={cartAddHandler.bind(this, 1, 'Black')} className='addToCart'>
             Add to Cart
           </button>
         </div>
         <div className="pcbr">
-          <p>{product.price}</p>
+          <p>${product.price}</p>
         </div>
       </div>
     </div>

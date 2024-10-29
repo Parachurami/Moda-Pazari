@@ -15,15 +15,35 @@ const Login = () => {
     const [password, setPassword] = useState()
     const navigate = useNavigate()
 
-    const handleSubmit = (e)=>{
+    
+
+    const handleSubmit = async()=>{
         // e.preventDefault()
-        axios.post('http://localhost:3001/login', {email,password})
-            .then(result =>{
-                console.log(result)
-            if(result.data === 'success'){
+        // axios.post('http://http://192.168.0.160:8000/login/', {username:email,password})
+        //     .then(result =>{
+        //         console.log(result.data)
+        //     if(result.data != null){
+        //         navigate('/')
+        //     }
+        //     }).catch(e =>{
+        //         console.log(e);
+        //     })
+        try{
+            const result = await axios.post(
+                'http://192.168.0.160:3001/login',
+                {
+                    email: email, 
+                    password: password
+                }
+            );
+            
+            if(result != null){
+                console.log('result data: ',result.data)
                 navigate('/')
             }
-            })
+        }catch(e){
+            console.log(e)
+        }
     }
     return (
         <div className='login' style={{background:'#392381', height:'100vh', width:'100vw'}} >
@@ -32,12 +52,12 @@ const Login = () => {
             </div>
             <div className={'right-side'}>
                 <div className="login-form" style={{height:'100%', width:'100%', display: 'flex', alignItems:"center", justifyContent:"center"}}>
-                    <form action="" onSubmit={handleSubmit}>
+                    <form action="">
                         <h2>Login</h2>
                         <div style={styles.inputContainer}>
                             <label htmlFor="email">Your Email</label>
                             <div className={'input-field'}>
-                                <input type="email" name='email' placeholder='Email Address' onChange={(e)=>{setEmail(e.target.value)}}/>
+                                <input type="text" name='email' placeholder='Username' onChange={(e)=>{setEmail(e.target.value)}}/>
                                 <Person style={{color: 'white'}} fontSize={'22'}/>
                             </div>
                         </div>
@@ -71,7 +91,7 @@ const Login = () => {
                             </div>
                             <Link style={styles.forgotText} to={""}>Forgotten?</Link>
                         </div>
-                        <button className={'loginBtn'} type={'button'}>Login</button>
+                        <button onClick={handleSubmit} className={'loginBtn'} type={'button'}>Login</button>
                         <p style={{textAlign:'center', alignSelf:"center", color:'#fff', marginTop: 20, fontSize:14}}>Don't have an account?</p>
                         <button className={'signupBtn'} type={'button'}>Sign Up</button>
                     </form>
